@@ -19,180 +19,24 @@ function draw() {
     drawF(90, 80);
     drawG(160, 80);
     drawH(210, 80);
+    drawI(30, 150);
+    drawJ(90, 150);
+    drawK(150, 150);
+    drawL(210, 150);
+    drawM(30, 220);
+    drawN(90, 220);
+    drawO(150, 220);
+    drawP(210, 220);
+    drawQ(300, 10);
+    drawR(360, 10);
 }
 
 function renderBoard(){
     for (let x = 0; x < width; x += 10) {
      for (let y = 0; y < height; y += 10) {
-        stroke(255);
+        stroke(50);
         fill(0);
         rect(x, y, 10, 10);
      }
    }
  }
-
- function drawA(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10);
-    rect(startX - 10, startY + 10, 10, 10);
-    rect(startX + 10, startY + 10, 10, 10);
-    rect(startX - 20, startY + 20, 10, 10);
-    rect(startX + 20, startY + 20, 10, 10);
-    rect(startX - 20, startY + 30, 10, 10);
-    rect(startX + 20, startY + 30, 10, 10);
-    rect(startX - 10, startY + 30, 10, 10);
-    rect(startX + 10, startY + 30, 10, 10);
-    rect(startX, startY + 30, 10, 10);
-    rect(startX - 20, startY + 40, 10, 10);
-    rect(startX + 20, startY + 40, 10, 10);
-    rect(startX - 20, startY + 50, 10, 10);
-    rect(startX + 20, startY + 50, 10, 10);
- }
-
- function drawB(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10);
-    rect(startX + 10, startY, 10, 10);
-    rect(startX + 20, startY, 10, 10);
-    rect(startX + 30, startY, 10, 10);
-    rect(startX + 40, startY + 10, 10, 10);
-    rect(startX + 30, startY + 20, 10, 10);
-    rect(startX + 20, startY + 20, 10, 10);
-    rect(startX + 10, startY + 20, 10, 10);
-    rect(startX + 40, startY + 30, 10, 10);
-    rect(startX + 40, startY + 40, 10, 10);
-    rect(startX + 30, startY + 50, 10, 10);
-    rect(startX + 20, startY + 50, 10, 10);
-    rect(startX + 10, startY + 50, 10, 10);
-    rect(startX, startY + 10, 10, 10);
-    rect(startX, startY + 20, 10, 10);
-    rect(startX, startY + 30, 10, 10);
-    rect(startX, startY + 40, 10, 10);
-    rect(startX, startY + 50, 10, 10);
- }
-
- function drawC(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10); 
-    rect(startX + 10, startY, 10, 10);
-    rect(startX + 20, startY, 10, 10); 
-    rect(startX + 30, startY + 10, 10, 10);
-    rect(startX - 10, startY + 10, 10, 10); 
-    rect(startX - 10, startY + 20, 10, 10); 
-    rect(startX - 10, startY + 30, 10, 10); 
-    rect(startX - 10, startY + 40, 10, 10); 
-    rect(startX, startY + 50, 10, 10); 
-    rect(startX + 10, startY + 50, 10, 10); 
-    rect(startX + 20, startY + 50, 10, 10);
-    rect(startX + 30, startY + 40, 10, 10); 
-}
-
-function drawD(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10);
-
-    rect(startX + 10, startY, 10, 10);
-    rect(startX + 20, startY, 10, 10);
-    rect(startX + 30, startY, 10, 10);
-    rect(startX + 40, startY + 10, 10, 10);
-
-    rect(startX, startY + 10, 10, 10);
-    rect(startX, startY + 20, 10, 10); 
-    rect(startX, startY + 30, 10, 10);
-    rect(startX, startY + 40, 10, 10);
-    rect(startX, startY + 50, 10, 10);
-
-    rect(startX + 10, startY + 50, 10, 10);
-    rect(startX + 20, startY + 50, 10, 10);
-    rect(startX + 30, startY + 50, 10, 10);
-    rect(startX + 40, startY + 40, 10, 10);
-    rect(startX + 40, startY + 30, 10, 10);
-    rect(startX + 40, startY + 20, 10, 10);
-}
-
-function drawE(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10);
-    rect(startX + 10, startY, 10, 10);
-    rect(startX + 20, startY, 10, 10);
-    rect(startX + 30, startY, 10, 10);
-    rect(startX + 40, startY, 10, 10);
-    rect(startX, startY + 10, 10, 10);
-    rect(startX, startY + 20, 10, 10);
-    rect(startX, startY + 30, 10, 10);
-    rect(startX + 10, startY + 20, 10, 10);
-    rect(startX + 20, startY + 20, 10, 10);
-    rect(startX + 30, startY + 20, 10, 10);
-    rect(startX + 40, startY + 20, 10, 10);
-    rect(startX, startY + 40, 10, 10);
-    rect(startX, startY + 50, 10, 10);
-    rect(startX + 10, startY + 50, 10, 10);
-    rect(startX + 20, startY + 50, 10, 10);
-    rect(startX + 30, startY + 50, 10, 10);
-    rect(startX + 40, startY + 50, 10, 10);
-}
-
-function drawF(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10);
-    rect(startX + 10, startY, 10, 10);
-    rect(startX + 20, startY, 10, 10);
-    rect(startX + 30, startY, 10, 10);
-    rect(startX + 40, startY, 10, 10);
-    rect(startX, startY + 10, 10, 10);
-    rect(startX, startY + 20, 10, 10);
-    rect(startX, startY + 30, 10, 10);
-    rect(startX, startY + 40, 10, 10);
-    rect(startX, startY + 50, 10, 10);
-    rect(startX + 10, startY + 20, 10, 10);
-    rect(startX + 20, startY + 20, 10, 10);
-    rect(startX + 30, startY + 20, 10, 10);
-    rect(startX + 40, startY + 20, 10, 10);
-}
-
-function drawG(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10); 
-    rect(startX + 10, startY, 10, 10);
-    rect(startX + 20, startY, 10, 10); 
-    rect(startX + 30, startY + 10, 10, 10);
-    rect(startX - 10, startY + 10, 10, 10); 
-    rect(startX - 10, startY + 20, 10, 10); 
-    rect(startX - 10, startY + 30, 10, 10); 
-    rect(startX - 10, startY + 40, 10, 10); 
-    rect(startX, startY + 50, 10, 10); 
-    rect(startX + 10, startY + 50, 10, 10); 
-    rect(startX + 20, startY + 50, 10, 10);
-    rect(startX + 30, startY + 40, 10, 10);
-    rect(startX + 30, startY + 30, 10, 10); 
-    rect(startX + 20, startY + 30, 10, 10); 
-    rect(startX + 10, startY + 30, 10, 10); 
-}
-
-function drawH(startX, startY) {
-    stroke(0);
-    fill(255);
-    rect(startX, startY, 10, 10);
-    rect(startX, startY + 10, 10, 10);
-    rect(startX, startY + 20, 10, 10);
-    rect(startX, startY + 30, 10, 10);
-    rect(startX, startY + 40, 10, 10);
-    rect(startX, startY + 50, 10, 10);
-    rect(startX + 10, startY + 20, 10, 10);
-    rect(startX + 20, startY + 20, 10, 10);
-    rect(startX + 30, startY + 20, 10, 10);
-    rect(startX + 40, startY + 20, 10, 10);
-    rect(startX + 40, startY + 10, 10, 10);
-    rect(startX + 40, startY + 20, 10, 10);
-    rect(startX + 40, startY + 30, 10, 10);
-    rect(startX + 40, startY + 40, 10, 10);
-    rect(startX + 40, startY + 50, 10, 10);
-    rect(startX + 40, startY, 10, 10);
-}
