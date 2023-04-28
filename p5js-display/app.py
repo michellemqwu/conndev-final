@@ -5,12 +5,12 @@ import praw
 from datetime import datetime
 #flask --app app run
 
-reddit = praw.Reddit(client_id ='tQMpPI22lCK3J7CO_wy9RA',
-					client_secret ='r571KeVPD-wovLQIkdbPPgyrkZz6HQ',
+reddit = praw.Reddit(client_id ='',
+					client_secret ='',
 					user_agent ='Dependent_Square_896')
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="a3bf88ded7f9444eb6211a0304969c31",
-                                                           client_secret="fe01a1b08a214b769d8c7893e9a21da9"))
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id="",
+                                                           client_secret=""))
 
 target_artist_id = '6RHTUrRF63xao58xh9FXYJ'
 target_subreddit = 'IVE'
