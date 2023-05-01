@@ -1,34 +1,68 @@
-let grid = [];
-let waitTime = 2000;
+let apiResult;
+let startX;
+
+let melonResult;
+let topfiftyResult;
+let kclubpartyResult;
+let redditResult;
+
+let displayStrings = [];
 
 function setup() {
-    createCanvas(640, 320);
-    for (let i = 0; i < 64; i++) {
-        grid[i] = [false, false, false, false, false, false, false, false, false, false]
-    }
+    createCanvas(640, 420);
     background(255);
-    renderBoard();
+    startX = 10;
+
+    httpDo('http://127.0.0.1:5000/melon', 
+    'GET', 
+    saveMelonResults);
+
+    httpDo('http://127.0.0.1:5000/topfifty', 
+    'GET', 
+    saveTopfiftyResults);
+
+    httpDo('http://127.0.0.1:5000/kclubparty', 
+    'GET', 
+    saveKclubpartyResults);
+
+    httpDo('http://127.0.0.1:5000/reddithot', 
+    'GET', 
+    saveRedditResults);
 }
 
 function draw() {
-    drawA(50, 10);
-    drawB(90, 10);
-    drawC(160, 10);
-    drawD(210, 10);
-    drawE(30, 80);
-    drawF(90, 80);
-    drawG(160, 80);
-    drawH(210, 80);
-    drawI(30, 150);
-    drawJ(90, 150);
-    drawK(150, 150);
-    drawL(210, 150);
-    drawM(30, 220);
-    drawN(90, 220);
-    drawO(150, 220);
-    drawP(210, 220);
-    drawQ(300, 10);
-    drawR(360, 10);
+    renderBoard();    
+    if (displayStrings.length != 0) {
+        for (let i = 0; i < displayStrings.length; i++) {
+            drawString(displayStrings[i], startX, 10 + 80*i);
+        }
+    }    
+    
+    startX = update(startX);
+}
+
+function saveRedditResults(result) {
+    redditResult = JSON.parse(result);
+    redditResult = redditResult.IVE;
+}
+
+function saveKclubpartyResults(result) {
+    kclubpartyResult = JSON.parse(result);
+    kclubpartyResult = kclubpartyResult.IVE;
+}
+
+function saveMelonResults(result) {
+    melonResult = JSON.parse(result);
+    melonResult = melonResult.IVE;
+    console.log(melonResult);
+    for (let i = 0; i < melonResult.length; i++) {
+        displayStrings.push(String(melonResult[i].track));
+    }
+}
+
+function saveTopfiftyResults(result) {
+    topfiftyResult = JSON.parse(result);
+    topfiftyResult = topfiftyResult.IVE;
 }
 
 function renderBoard(){
