@@ -7,6 +7,9 @@ let kclubpartyResult;
 let redditResult;
 
 let displayStrings = [];
+let displayStrings2 = [];
+let displayStrings3 = [];
+let displayStrings4 = [];
 
 function setup() {
     createCanvas(640, 420);
@@ -36,25 +39,49 @@ function draw() {
         for (let i = 0; i < displayStrings.length; i++) {
             drawString(displayStrings[i], startX, 10 + 80*i);
         }
-    }    
+    } 
     
+    if (displayStrings2.length != 0) {
+        for (let i = 0; i < displayStrings2.length; i++) {
+            drawString(displayStrings2[i], startX + 600, 10 + 80*i);
+        }
+    } 
+
+    if (displayStrings3.length != 0) {
+        for (let i = 0; i < displayStrings3.length; i++) {
+            drawString(displayStrings3[i], startX + 1200, 10 + 80*i);
+        }
+    }
+    
+    // if (displayStrings4.length != 0) {
+    //     for (let i = 0; i < displayStrings4.length; i++) {
+    //         drawString(displayStrings4[i], startX, 10 + 80*i);
+    //     }
+    // }
+
     startX = update(startX);
 }
 
 function saveRedditResults(result) {
     redditResult = JSON.parse(result);
     redditResult = redditResult.IVE;
+    console.log(redditResult);
+    for (let i = 0; i < redditResult.length; i++) {
+        displayStrings4.push(String(redditResult[i].title));
+    }
 }
 
 function saveKclubpartyResults(result) {
     kclubpartyResult = JSON.parse(result);
     kclubpartyResult = kclubpartyResult.IVE;
+    for (let i = 0; i < kclubpartyResult.length; i++) {
+        displayStrings2.push(String(kclubpartyResult[i].track));
+    }
 }
 
 function saveMelonResults(result) {
     melonResult = JSON.parse(result);
     melonResult = melonResult.IVE;
-    console.log(melonResult);
     for (let i = 0; i < melonResult.length; i++) {
         displayStrings.push(String(melonResult[i].track));
     }
@@ -63,6 +90,9 @@ function saveMelonResults(result) {
 function saveTopfiftyResults(result) {
     topfiftyResult = JSON.parse(result);
     topfiftyResult = topfiftyResult.IVE;
+    for (let i = 0; i < topfiftyResult.length; i++) {
+        displayStrings3.push(String(topfiftyResult[i].track));
+    }
 }
 
 function renderBoard(){
