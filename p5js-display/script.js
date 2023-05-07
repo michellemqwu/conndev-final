@@ -35,29 +35,29 @@ function setup() {
 
 function draw() {
     renderBoard();    
-    if (displayStrings.length != 0) {
-        for (let i = 0; i < displayStrings.length; i++) {
-            drawString(displayStrings[i], startX, 10 + 80*i);
-        }
-    } 
+    // if (displayStrings.length != 0) {
+    //     for (let i = 0; i < displayStrings.length; i++) {
+    //         drawString(displayStrings[i], startX, 10 + 80*i);
+    //     }
+    // } 
     
-    if (displayStrings2.length != 0) {
-        for (let i = 0; i < displayStrings2.length; i++) {
-            drawString(displayStrings2[i], startX + 600, 10 + 80*i);
-        }
-    } 
+    // if (displayStrings2.length != 0) {
+    //     for (let i = 0; i < displayStrings2.length; i++) {
+    //         drawString(displayStrings2[i], startX + 600, 10 + 80*i);
+    //     }
+    // } 
 
-    if (displayStrings3.length != 0) {
-        for (let i = 0; i < displayStrings3.length; i++) {
-            drawString(displayStrings3[i], startX + 1200, 10 + 80*i);
-        }
-    }
-    
-    // if (displayStrings4.length != 0) {
-    //     for (let i = 0; i < displayStrings4.length; i++) {
-    //         drawString(displayStrings4[i], startX, 10 + 80*i);
+    // if (displayStrings3.length != 0) {
+    //     for (let i = 0; i < displayStrings3.length; i++) {
+    //         drawString(displayStrings3[i], startX + 1200, 10 + 80*i);
     //     }
     // }
+    
+    if (displayStrings4.length != 0) {
+        for (let i = 0; i < displayStrings4.length; i++) {
+            drawString(displayStrings4[i], startX, 10 + 80*i);
+        }
+    }
 
     startX = update(startX);
 }
