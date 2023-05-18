@@ -53,13 +53,24 @@ function draw() {
     //     }
     // }
     
-    if (displayStrings4.length != 0) {
-        for (let i = 0; i < displayStrings4.length; i++) {
-            drawString(displayStrings4[i], startX, 10 + 80*i);
-        }
-    }
+    // if (displayStrings4.length != 0) {
+    //     for (let i = 0; i < displayStrings4.length; i++) {
+    //         drawString(displayStrings4[i], startX, 10 + 80*i);
+    //     }
+    // }
 
-    startX = update(startX);
+    // startX = update(startX);
+
+    drawO(startX, 50);
+    draw1(startX + 70, 50);
+    draw2(startX + 70 * 2, 50);
+    draw3(startX + 70 * 3, 50);
+    draw4(startX + 70 * 4, 50);
+    draw5(startX + 70 * 5, 50);
+    draw6(startX + 70 * 6, 50);
+    draw7(startX + 70 * 7, 50);
+    draw8(startX + 70 * 8, 50);
+    draw9(startX, 150);
 }
 
 function saveRedditResults(result) {
